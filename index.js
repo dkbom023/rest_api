@@ -76,7 +76,7 @@ app.get("/api/courses/:id", (req, res) => {
   res.send(course);
 });
 
-app.delete("/api/course/:id", (req, res) => {
+app.delete("/api/courses/:id", (req, res) => {
   const course = courses.find((c) => c.id === parseInt(req.params.id));
   if (!course) {
     res.status(404).send("id was not found!!");
